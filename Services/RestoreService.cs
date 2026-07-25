@@ -112,7 +112,7 @@ namespace DbRestoreTool.Services
             try
             {
                 Console.WriteLine("Restore in progress...");
-                await _restoreHelper.RestoreDatabaseAsync(targetDatabaseName, bakFilePath, msg => Console.WriteLine($"  {msg}"));
+                await _restoreHelper.RestoreDatabaseAsync(targetDatabaseName, bakFilePath);
 
                 stopwatch.Stop();
                 Console.WriteLine("SUCCESS: Restore completed successfully.");
